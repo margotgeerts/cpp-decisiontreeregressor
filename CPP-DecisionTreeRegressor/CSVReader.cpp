@@ -26,11 +26,11 @@ DataFrame CSVReader::read(std::string filePath) {
 
     while (getline (f, line)) {         /* read each line */
         std::string val;                     /* string to hold value */
-        std::vector<int> row;                /* vector for row of values */
+        std::vector<float> row;                /* vector for row of values */
         std::stringstream s (line);          /* stringstream to parse csv */
         while (getline (s, val, ','))   /* for each value */
             row.push_back (stoi(val));  /* convert to int, add to row */
-        array.push_back (row);          /* add row to array */
+        array.push_back(row);          /* add row to array */
     }
     f.close();
     return array;

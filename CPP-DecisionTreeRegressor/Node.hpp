@@ -15,7 +15,7 @@
 #include <cmath>
 
 // create an alias for the data structure we are going to use to store observations
-using DataFrame = std::vector<std::vector<float>>;
+using DataFrame = std::vector<std::vector<float> >;
 
 struct bestSplitReturn
 {
