@@ -10,15 +10,18 @@
 
 #include <string>
 #include <vector>
+#include <set>
+#include <numeric>
+#include <cmath>
 
 // create an alias for the data structure we are going to use to store observations
-using DataFrame = std::vector<std::vector<int>>;
+using DataFrame = std::vector<std::vector<float>>;
 
 struct bestSplitReturn
 {
-    float resultantGini;
+    float resultantGain;
     int feature;
-    int category;
+    float value;
 };
 
 // instantiate the node in the heap, then don't need to explicitly allocate member
@@ -52,8 +55,8 @@ class Node
             // copy stuff
             return this;
         }
-        static float getGiniImpurity(const std::vector<int>& outcomes);
-        static DataFrame getSplitTargets(const DataFrame& dataP, int feature, int category);
+        static float getMSE(const std::vector<float>& outcomes);
+        static DataFrame getSplitTargets(const DataFrame& dataP, int feature, float value);
         static bestSplitReturn getBestSplit(const DataFrame& dataP); //don't pass by reference
     
 
