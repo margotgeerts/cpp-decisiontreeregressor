@@ -34,6 +34,7 @@
 		4F7A359B27FF1DA300921B68 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
 		4F7A359D27FF1DB800921B68 /* CSVReader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CSVReader.cpp; sourceTree = "<group>"; };
 		4F7A359E27FF1DB800921B68 /* CSVReader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CSVReader.hpp; sourceTree = "<group>"; };
+		4F7A35A027FF428800921B68 /* test */ = {isa = PBXFileReference; lastKnownFileType = folder; path = test; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +67,7 @@
 		4F7A358C27FF178500921B68 /* CPP-DecisionTreeRegressor */ = {
 			isa = PBXGroup;
 			children = (
+				4F7A35A027FF428800921B68 /* test */,
 				4F7A358D27FF178500921B68 /* main.cpp */,
 				4F7A359427FF1D4700921B68 /* RegressionTree.cpp */,
 				4F7A359527FF1D4700921B68 /* RegressionTree.hpp */,

@@ -16,10 +16,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11  -stdlib=libc++")
 
 add_compile_options(-O3 -Wall)
 
-enable_testing()
-
-add_subdirectory(googletest)
-
 set(Headers
     Node.hpp
     CSVReader.hpp
