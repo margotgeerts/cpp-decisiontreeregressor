@@ -14,13 +14,13 @@
 
 struct TwoDataFrame
 {
-    DataFrame pres;
-    DataFrame abs;
+    DataFrame left;
+    DataFrame right;
 };
 
 // instantiate the node in the heap, then don't need to explicitly allocate member
 // variables memory in the heap
-class DecisionTree
+class RegressionTree
 {
     // Access specifier
     public:
@@ -28,18 +28,18 @@ class DecisionTree
         Node* rootP;
         //DataFrame trainingData;
 
-        DecisionTree(std::string trainPath);
+        RegressionTree(std::string trainPath);
 
-        ~DecisionTree();
+        ~RegressionTree();
 
-        DecisionTree* DeepCopy() {
+        RegressionTree* DeepCopy() {
             // READ ABOUT DEEP AND SHALLOW COPIES
 
             // copy stuff
             return this;
         }
 
-        DecisionTree* ShallowCopy() {
+        RegressionTree* ShallowCopy() {
             // READ ABOUT DEEP AND SHALLOW COPIES
 
             // copy stuff
@@ -49,11 +49,11 @@ class DecisionTree
     
         // Traverse tree
         void traverseTree() const;
-        static TwoDataFrame splitData(const DataFrame& dataBefore, int feature, int category);
+        static TwoDataFrame splitData(const DataFrame& dataBefore, int feature, float value);
         static void constructTree(Node* nodeP);
-        std::vector<int> predict(std::string path);
+        std::vector<float> predict(std::string path);
         void deleteChildren(Node* nodeP);
-        static int recursivelyPredict(Node* nodeP, std::vector<int> observations);
+        static float recursivelyPredict(Node* nodeP, std::vector<float> observations);
 };
 
 
