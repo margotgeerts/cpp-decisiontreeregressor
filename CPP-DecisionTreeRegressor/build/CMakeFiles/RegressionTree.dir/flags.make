@@ -6,5 +6,5 @@ CXX_DEFINES = -DRegressionTree_EXPORTS
 
 CXX_INCLUDES = 
 
-CXX_FLAGS =  -std=c++11  -stdlib=libc++ -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -fPIC -O3 -Wall
+CXX_FLAGS =  -std=c++1z  -stdlib=libc++ -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -fPIC -O3 -Wall
 
